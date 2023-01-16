@@ -1,3 +1,10 @@
+/etc/apache2/httpd.conf
+
+/etc/apache2/default-server.conf
+
+/srv/www/htdocs
+
+
 zypper search apache 2
 
 /srv/www/htdocs
