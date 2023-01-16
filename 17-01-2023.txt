@@ -1,0 +1,61 @@
+zypper search apache 2
+
+/srv/www/htdocs
+vi index.html
+
+systemctl start apache2.service
+apache2ctl configtest
+
+zypper install vsftpd
+systemctl start vsftpd
+
+cd /srv/ftp
+cat > kkr.txt
+
+systemctl disable firewalld
+
+Opdracht 1 
+
+. Zet met de bovenstaande informatie een FTP-server op. 
+
+„ Ga naar de map /srv/ ftp en maak een tekstbestand aan met de naam FTPbestand. 
+
+‚ Probeer vanaf een andere computer (client) dit bestand te downtoaden door in de browser £tp://ipadres van server te typen. „ Installeer op de client de FTP-client Filezilla. ‚ Start Filezilla op, vul bij Host het IP-adres van de FTP-server in, bij Gebruikersnaam Anonymous. Download het bestand. Probeer ook een be
+
+stand te uploaden. Lukt dit?
+
+
+Je ziet dat bij een standaard-installatie van VSFTP de configuratie defauj, ingesteld is om de user Anonymous te laten downloaden zonder wacht. woord. In het bestand /etc/vsftpd.conf kun je zien waarom de gebruiker Anonymous in kan loggen. 
+
+Bekijk het bestand vsftpd.conf (cat /etc/vsftpd.conf | less). Bekijk vooral de secties Anonymous FTP user Settings en Local FTP user Settings. 
+
+Opdracht 2 
+
+In bovenstaande opdracht heb je gezien dat local users standaard enableg zijn, oftewel een gebruiker die op het server-systeem in kan loggen moet ook in kunnen loggen via FTP. 
+
+Log in met Filezilla op de FTP-server met gebruiker Frits. 
+
+Probeer een bestand te uploaden in de home-map van Frits. Lukt dit? Open met Vi het bestand /etc/vsftpd.conf. Ga naar de sectie General Settings en wijzig write enable=NO in write enable=YES. 
+
+Herstart de FTP-server om de configuratiefile opnieuw uit te lezen (systemctl restart vsftpd.service). 
+
+Log opnieuw in als user Frits en probeer een bestand te uploaden. 
+
+Als je wilt dat Frits en Suse alleen in kunnen loggen, kun je een lijst aanmaken waarin je de gebruikers vermeldt. Hiervoor moet je nog twee regels activeren en een bestand aanmaken: 
+
+Open met Vi het bestand /etc/vsftpd.conf. 
+
+Verwijder het commentaarteken voor de regels chroot local user=YES 
+
+chroot list enable=YES 
+
+chroot list file=/etc/vsftpd.chroot list 
+
+Typ in het bestand de tekst allow writeable chroot=yes 
+
+Ga naar de map /etc en maak het bestand vsftpd.chroot_list en typ op de eerste regel frits en op de tweede regel suse. 
+
+Sla het bestand op en herstart de FTP-server. 
+
+Log om de beurt via Filezilla in als gebruiker Frits, Suse en Fred en bekijk de verschillen. 
+
