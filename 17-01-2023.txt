@@ -66,3 +66,27 @@ Sla het bestand op en herstart de FTP-server.
 
 Log om de beurt via Filezilla in als gebruiker Frits, Suse en Fred en bekijk de verschillen. 
 
+
+Opdracht 3 
+
+Als het goed is draait er op jouw computer ook een web-server met twee websites: voornaam.test en achternaam.test. Om bestanden in deze mappen te kunnen uploaden wil je per website één gebruiker hebben met al
+
+
+leen rechten op die map. In onderstaande opdracht maken we voor de map voornaam.test een gebruiker die alleen rechten heeft op die map. 
+
+Kijk of er een groep FTP bestaat, maak deze zonodig aan. 
+
+Ga naar de map /srv/www/vhosts en zorg dat de groep FTP groepseigenaar wordt van de map voornaam.test. 
+
+Geef de rechten 775 op deze map. Maak in één commando een nieuwe gebruiker AdminVoornaam aan die 
+
+lid is van de groep ftp en die alleen rechten heeft op de map /srv/www/ 
+
+vhosts/voornaam.test; useradd -d /srv/www/vhosts/voornaam.test AdminVoornaam -g 
+
+ftp Maak voor de gebruiker een nieuw wachtwoord: 
+
+passwd AdminVoornaam Start de web-server en de FTP-server opnieuw op. Log in met de zojuist gemaakte gebruiker en kijk of je alleen rechten hebt 
+
+op de uploadmap. Herhaal dit voor de gebruiker achternaam. 
+
