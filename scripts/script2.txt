@@ -1,0 +1,5 @@
+#!/bin/bash
+#Dit script toont variabelen
+VOORNAAM=Linus
+ACHTERNAAM=Torvalds
+echo "Mijn voornaam is" "$VOORNAAM" "en mijn achternaam is" "$ACHTERNAAM"

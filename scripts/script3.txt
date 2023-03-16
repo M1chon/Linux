@@ -1,0 +1,4 @@
+#!/bin/bash
+#Dit script gebruikt parameters als input voor variabelen.
+
+echo "De naam van de script is" "$0"", mijn favoriete kleur is" "$1"", ik eet graag" "$2" "en ik houd van" "$3""."

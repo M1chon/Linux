@@ -1,0 +1,4 @@
+#!/bin/bash
+#Dit script geeft de user en home dir weer
+
+echo "Ik ben de gebruiker" "$USER" "en mijn homedirectory is" "$HOME"
