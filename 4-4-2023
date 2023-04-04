@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Hoeveel getallen wil je ingeven?"
+read aantal_getallen
+
+declare -a getallen
+
+for (( i=0; i<$aantal_getallen; i++ ))
+do
+    echo "Voer getal $((i+1)) in:"
+    read getal
+    getallen[$i]=$getal
+done
+
+som=0
+for getal in "${getallen[@]}"
+do
+    som=$(echo "$som + $getal" | bc)
+done
+
+gemiddelde=$(echo "scale=2; $som / $aantal_getallen" | bc)
+
+echo "Het gemiddelde van de ingevoerde getallen is: $gemiddelde"
