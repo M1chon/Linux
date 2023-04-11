@@ -12,5 +12,10 @@ mv "$backup_dir" "$backup_dir-$(date "$date_format")"
 
 crontab -e
 
-0 1-5 * * * /pad/naar/mijn/script.sh
+* 1-5 * * * /pad/naar/mijn/script.sh
 
+
+#!/bin/bash
+
+mkdir /home/backup/hbk$(date +" %d-%m-%y")
+Rsync -av /home /home/backup/hbk$(date +"%d-%m-%y")
