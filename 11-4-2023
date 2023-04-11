@@ -1,0 +1,16 @@
+#!/bin/bash
+
+backup_dir="/backup/hbk$(date +%d-%m-%y)"
+date_format="+%Y-%m-%d_%H-%M-%S"
+
+mkdir -p "$backup_dir"
+
+rsync -avz --delete /path/to/source "$backup_dir"
+
+mv "$backup_dir" "$backup_dir-$(date "$date_format")"
+
+
+crontab -e
+
+0 1-5 * * * /pad/naar/mijn/script.sh
+
