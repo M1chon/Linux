@@ -12,8 +12,8 @@ from TwitchChannelPointsMiner.classes.entities.Bet import Strategy, BetSettings,
 from TwitchChannelPointsMiner.classes.entities.Streamer import Streamer, StreamerSettings
 
 twitch_miner = TwitchChannelPointsMiner(
-    username="MichonCS",
-    password="#ikwij48",           # If no password will be provided, the script will ask interactively
+    username="",
+    password="",           # If no password will be provided, the script will ask interactively
     claim_drops_startup=True,                  # If you want to auto claim all drops from Twitch inventory on the startup
     priority=[    
         Priority.DROPS, 
