@@ -33,6 +33,18 @@ twitch_miner.mine(
         "exerpascs",
         "nayomy_cs",
         "qiyarah",
+   #sign 250k
+        "surgicalgoblin",
+        "entropiqteam",
+        "kennys",
+        "smooyacs",
+        "stewie2k",
+        "furioussscs",
+        "lobanjicaa",
+        "syrson",
+        "franzj",
+        "heatoncs",
+        "fl0m",
         
 #sign
         "gekk_",
@@ -123,18 +135,7 @@ twitch_miner.mine(
         "dosia_csgo",
         "strakatv",
         "izakooo",
-#sign 250k
-        "surgicalgoblin",
-        "entropiqteam",
-        "kennys",
-        "smooyacs",
-        "stewie2k",
-        "furioussscs",
-        "lobanjicaa",
-        "syrson",
-        "franzj",
-        "heatoncs",
-        "fl0m",
+        
         
         "faenex",
         "pewdiepie",
