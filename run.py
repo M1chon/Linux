@@ -1,4 +1,5 @@
-
+https://discord.com/api/webhooks/1113177628581564457/PSYUTkydmaa4M4AlHHTCMQwFN-5qbMQWXFY_c4ogolilrXfPICT6_QRBK3T7PyRWmSMN
+Events.STREAMER_ONLINE, Events.GAIN_FOR_CLAIM, Events.BET_WIN,  Events.MOMENT_CLAIM,  Events.DROP_CLAIM,  Events.CHAT_MENTION,
 twitch_miner.mine(
     [
         Streamer("salinavdl",),
